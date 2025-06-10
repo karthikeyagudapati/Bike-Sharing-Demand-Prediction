@@ -1,0 +1,106 @@
+**Loan Comparison Window/Page UI Description**
+
+**1. Purpose:**
+To provide students with a clear, easy-to-understand comparison of education loan options from various banks and lenders, helping them make informed financial decisions for their studies.
+
+**2. User Flow:**
+*   User navigates to this page/window (e.g., via "Compare Loans" button on dashboard or other relevant CTAs).
+*   User inputs their loan requirements (amount, duration, income status, etc.).
+*   User clicks "Compare Loans."
+*   The system displays a list of matching loan options in a table or card format.
+*   User can view details for each loan, including interest rates, EMI, fees, and benefits.
+*   User can sort or filter the loan options.
+*   User may use an EMI calculator widget.
+*   User can click "Check My Eligibility" for a specific loan, which might involve a few more questions (modal or new section).
+*   User can click "Apply Now" to be redirected to the bank's website or an internal application process.
+
+**3. Key Components:**
+
+    **3.1. Header/Navigation Bar (Consistent with other pages, if a full page) or Window Title (if a modal/pop-up).**
+
+    **3.2. Input Section:**
+        *   **Placement:** Typically at the top of the page or in a prominent sidebar.
+        *   **Title:** "Find the Right Loan for Your Studies" or similar.
+        *   **Input Fields:**
+            *   **Loan Amount Needed:**
+                *   **Type:** Numeric input field with currency symbol.
+                *   **Label:** "Loan Amount Needed (e.g., in USD, INR)"
+            *   **Preferred Repayment Duration:**
+                *   **Type:** Dropdown or numeric input field with unit (e.g., years).
+                *   **Label:** "Preferred Repayment Duration"
+                *   **Options (if dropdown):** "5 years", "7 years", "10 years", "12 years", "15 years".
+            *   **Income Status (Applicant/Co-applicant):**
+                *   **Type:** Dropdown.
+                *   **Label:** "Primary Income Earner" or "Income Status Of"
+                *   **Options:** "Student (Self)", "Parent", "Guardian", "Spouse".
+            *   **Course Country:**
+                *   **Type:** Dropdown.
+                *   **Label:** "Country of Study"
+                *   **Functionality:** Affects available loan products and terms.
+            *   **University Name (Optional):**
+                *   **Type:** Text input field (autocomplete suggestions for university names can be helpful).
+                *   **Label:** "University Name (Optional)"
+                *   **Functionality:** Helps identify specific bank tie-ups or university-specific loan schemes.
+        *   **Action Button:**
+            *   **Text:** "Compare Loans" or "Show Loan Options"
+            *   **Functionality:** Submits the input criteria to fetch and display matching loan products.
+
+    **3.3. Comparison Display Area:**
+        *   **Placement:** Main content area, below the input section.
+        *   **Layout:** Can be a **Table View** (good for direct comparison of many features) or a **Card View** (good for visual separation of options).
+        *   **Title (if needed):** "Available Loan Options"
+        *   **For each Loan Option (row in table or individual card):**
+            *   **Bank Logo & Name:**
+                *   **Display:** Bank's official logo and full name.
+            *   **Loan Product Name (if any):**
+                *   **Display:** Specific name of the loan scheme (e.g., "Baroda Scholar Loan," "HDFC Credila Education Loan").
+            *   **Interest Rate:**
+                *   **Display:** Clearly stated rate, specifying if fixed or floating (e.g., "8.5% - 10.5% floating", "9.2% fixed").
+                *   **Tooltip/Info Icon:** Could explain "floating" vs. "fixed" or link to a glossary.
+            *   **Maximum Loan Amount Offered:**
+                *   **Display:** The upper limit the bank might offer for this product (e.g., "Up to $50,000").
+            *   **Repayment Period Range:**
+                *   **Display:** Min to Max years offered (e.g., "5 - 15 years").
+            *   **Processing Fee:**
+                *   **Display:** Percentage or fixed amount (e.g., "1% of loan amount", "$200"). Clearly state if nil.
+            *   **Co-applicant Requirements:**
+                *   **Display:** "Yes" / "No".
+                *   **On Hover/Click (Tooltip or small modal):** Brief details like "Parent or Guardian with stable income required."
+            *   **Key Benefits/Features (Bulleted list or icons with text):**
+                *   **Examples:** "Moratorium period (Course + 1 year)", "No collateral up to $X amount", "Online application", "Pre-payment options available", "Tax benefits".
+            *   **Estimated EMI:**
+                *   **Display:** Calculated monthly payment based on the loan amount and preferred duration entered by the user, using the displayed interest rate (or an average if a range).
+                *   **Disclaimer:** Clearly state this is an estimate (e.g., "Estimated EMI: $500/month*").
+            *   **Action Buttons:**
+                *   **"Check My Eligibility":**
+                    *   **Functionality:** May open a short modal asking a few more targeted questions (e.g., "Your approximate annual family income?", "Do you have collateral?"). Based on answers, provides a preliminary eligibility assessment (e.g., "Likely Eligible", "May Need More Info", "Likely Ineligible").
+                *   **"Apply Now":**
+                    *   **Functionality:** Links to the bank's official education loan website or an internal application form if the platform has direct integration.
+        *   **Empty State:** If no loans match the criteria, display: "No loan options found for your current selection. Try adjusting your inputs."
+        *   **Loading State:** Visual indicator while fetching/updating loan options.
+
+    **3.4. Filters/Sort Options (Optional but helpful for many results):**
+        *   **Placement:** Sidebar or above the comparison table/cards.
+        *   **Sort By (Dropdown):**
+            *   **Options:** "Interest Rate (Low to High)", "EMI (Low to High)", "Bank Name (A-Z)", "Processing Fee (Low to High)".
+        *   **Filter By (Checkboxes or multi-select dropdowns):**
+            *   **Bank Name:** List of banks shown in results.
+            *   **Key Features:** "Moratorium available", "No collateral required", "Fixed Interest Rate".
+
+    **3.5. EMI Calculator Widget:**
+        *   **Placement:** Could be a distinct section on the page or a readily accessible pop-up/widget.
+        *   **Title:** "EMI Calculator"
+        *   **Input Fields:**
+            *   Loan Amount (Numeric)
+            *   Annual Interest Rate (%) (Numeric)
+            *   Loan Tenure (Years or Months) (Numeric input or dropdown)
+        *   **Output:**
+            *   Calculated Monthly EMI (Displayed clearly).
+            *   Optionally, a simple pie chart showing principal vs. total interest.
+        *   **Button:** "Calculate EMI"
+
+    **3.6. Disclaimers:**
+        *   **Placement:** Footer of the comparison section or page.
+        *   **Content:** Standard disclaimers about interest rates being subject to change, the platform not being a lender, encouraging users to verify details with banks, etc. (e.g., "All loan information is indicative and subject to change. Please verify all terms and conditions with the respective financial institution before applying.")
+
+    **3.7. Footer (Consistent if a full page)**

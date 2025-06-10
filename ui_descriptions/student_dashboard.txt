@@ -1,0 +1,86 @@
+**Student Dashboard UI Description**
+
+**1. Purpose:**
+The Student Dashboard is the main landing page for students after they log in. It aims to provide a quick overview of their academic progress, application statuses, upcoming deadlines, and personalized recommendations, while also offering easy access to key platform features.
+
+**2. User Flow:**
+*   User logs in.
+*   User is redirected to the Student Dashboard.
+*   User can view summarized information at a glance.
+*   User can click on links/buttons to navigate to detailed views (e.g., "Edit Profile", "View All Applications", "View Full Timeline/Calendar", "Full College Discovery") or initiate actions (e.g., "Find Colleges", "Compare Loans").
+*   User can click on the notification bell to view notifications.
+
+**3. Key Components:**
+
+    **3.1. Header/Navigation Bar (Persistent across the platform):**
+        *   Logo
+        *   Navigation Links (e.g., Dashboard, Colleges, Applications, Resources, Profile)
+        *   Notifications Bell Icon:
+            *   Visual cue (e.g., a red dot or number badge) indicates unread notifications.
+            *   Clicking opens a dropdown or navigates to a dedicated notifications page.
+        *   User Profile Avatar/Name:
+            *   Clicking opens a dropdown with options like "View Profile", "Settings", "Logout".
+
+    **3.2. Welcome Message:**
+        *   **Text:** "Welcome, [Student Name]!"
+        *   **Placement:** Prominently at the top of the main content area.
+
+    **3.3. Profile Summary Section:**
+        *   **Layout:** A dedicated card or section.
+        *   **Content:**
+            *   **Degree & Stream:** Displays the student's current or intended degree (e.g., "Bachelor of Technology") and stream/major (e.g., "Computer Science").
+            *   **Overall Academic Score:** Displays GPA (e.g., "GPA: 3.8/4.0") or Percentage (e.g., "Overall Score: 85%"). Label should be clear.
+            *   **Key Exam Scores:**
+                *   Displays scores for standardized tests like IELTS (e.g., "IELTS: 7.5"), GRE (e.g., "GRE: 320").
+                *   Icons for each exam type can be used for better visual distinction.
+            *   **Link/Button:** "Edit Profile"
+                *   Navigates the user to their full profile editing page.
+
+    **3.4. My Applications Section:**
+        *   **Layout:** A list or a series of cards. If cards, max 2-3 visible with a scroll or "View All" for more.
+        *   **Title:** "My Applications"
+        *   **For each application item:**
+            *   **College Name:** (e.g., "Massachusetts Institute of Technology")
+            *   **Program:** (e.g., "MS in Computer Science")
+            *   **Application Status:** (e.g., "Draft", "Submitted", "Under Review", "Accepted", "Rejected", "Awaiting Decision"). Color-coding for status can be used.
+            *   **Application Deadline:** (e.g., "Deadline: Jan 15, 2025")
+        *   **Link/Button:** "View All Applications"
+            *   Navigates to a page listing all applications with more details and management options.
+        *   **Empty State:** If no applications, display a message like "You haven't started any applications yet. Get started by finding colleges!" with a call-to-action button.
+
+    **3.5. Upcoming Deadlines Section:**
+        *   **Layout:** A summarized list.
+        *   **Title:** "Upcoming Deadlines"
+        *   **Content:** Shows the next 3-5 most urgent deadlines.
+        *   **For each deadline item:**
+            *   **Item Name:** (e.g., "Harvard University - MBA Application", "National Scholarship Program")
+            *   **Date:** (e.g., "Oct 30, 2024")
+            *   **Countdown:** (e.g., "in 3 days", "due tomorrow", "due today"). Color-coding for urgency (e.g., red for very soon).
+        *   **Link/Button:** "View Full Timeline/Calendar"
+            *   Navigates to a dedicated calendar or timeline view showing all deadlines.
+        *   **Empty State:** If no upcoming deadlines, display a message like "No immediate deadlines. Plan ahead!"
+
+    **3.6. Recommended Colleges Section:**
+        *   **Layout:** A small section, perhaps 2-3 cards horizontally or a short vertical list.
+        *   **Title:** "Recommended For You"
+        *   **For each recommended college item:**
+            *   **College Name:** (e.g., "Stanford University")
+            *   **Program:** (e.g., "MS in Data Science")
+            *   **Button:** "View Details"
+                *   Navigates to the College Detail View for that specific college/program.
+        *   **Link/Button:** "Full College Discovery" or "See More Recommendations"
+            *   Navigates to the main College Shortlist/Discovery Page.
+        *   **Rationale (Optional, on hover/tooltip):** Briefly explains why the college is recommended (e.g., "Good match for your academic profile and interest in AI").
+
+    **3.7. Quick Actions/Shortcuts Section:**
+        *   **Layout:** A series of prominent buttons.
+        *   **Title (Optional):** "Quick Actions" or integrated naturally.
+        *   **Buttons:**
+            *   "Find Colleges" (Navigates to College Shortlist/Discovery Page)
+            *   "Compare Loans" (Navigates to Loan Comparison Page/Opens Modal)
+            *   "Get SOP Help" (Navigates to a page/service for Statement of Purpose assistance)
+            *   Other relevant shortcuts based on platform features.
+
+    **3.8. Footer (Persistent across the platform):**
+        *   Links: About Us, Contact, FAQ, Terms of Service, Privacy Policy.
+        *   Copyright information.
